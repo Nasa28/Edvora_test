@@ -13,12 +13,14 @@ const App = () => {
       <Router>
         <MainNav />
         <Nav />
-        <Routes>{<Route exact path="/" element={<NearestRides />} />}</Routes>
         <Routes>
-          {<Route exact path="/upcoming-rides" element={<UpcomingRides />} />}
-        </Routes>
-        <Routes>
-          {<Route exact path="/past-rides" element={<PastRides />} />}
+          <Route exact path="/" element={<NearestRides />} />
+
+          <Route path="/nearest-rides" element={<NearestRides />} />
+
+          <Route path="/upcoming-rides" element={<UpcomingRides />} />
+
+          <Route path="/past-rides" element={<PastRides />} />
         </Routes>
       </Router>
     </div>

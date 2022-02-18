@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Img from '../assets/images/image.png';
 
 const PastRides = () => {
   return (
-    <div>PastRides</div>
-  )
-}
+    <>
+      <img src={Img} alt="Location" />
+      <div>Past Rides</div>
+    </>
+  );
+};
 
-export default PastRides
+export default PastRides;

@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Img from '../assets/images/image.png';
 
 const UpcomingRides = () => {
   return (
-    <div>UpcomingRides</div>
-  )
-}
+    <>
+      <img src={Img} alt="Location" />
+      <div>Upcoming Rides</div>
+    </>
+  );
+};
 
-export default UpcomingRides
+export default UpcomingRides;
