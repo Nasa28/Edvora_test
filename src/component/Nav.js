@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import NearestRides from './NearestRides';
 import UpcomingRides from './UpcomingRides';
 import PastRides from './PastRides';
+import { sortedRides } from './allRides';
+import { filterPast } from './PastRides';
+import { filterUpcoming } from './UpcomingRides';
 
 const Nav = () => {
   return (
@@ -14,7 +17,7 @@ const Nav = () => {
             to="/nearest-rides"
             onClick={() => NearestRides()}
           >
-            <h3>Nearest Rides</h3>
+            <h3>Nearest Rides({sortedRides.length})</h3>
           </Link>
         </div>
         <header>
@@ -23,7 +26,7 @@ const Nav = () => {
             to="/upcoming-rides"
             onClick={() => UpcomingRides()}
           >
-            <h3>Upcoming Rides</h3>
+            <h3>Upcoming Rides({filterUpcoming.length})</h3>
           </Link>
         </header>
         <div>
@@ -32,7 +35,7 @@ const Nav = () => {
             to="/past-rides"
             onClick={() => PastRides()}
           >
-            <h3>Past Rides</h3>
+            <h3>Past Rides({filterPast.length})</h3>
           </Link>
         </div>
       </nav>

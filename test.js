@@ -26,7 +26,7 @@ function timeConverter(UNIX_timestamp) {
   return time;
 }
 console.log(
-  new Date(1644924365 * 1000) > Math.round(new Date().getTime() / 1000),
+  new Date(1644924365) <  Math.round(new Date().getTime()),
 );
 console.log(timeConverter());
 console.log(Math.round(new Date().getTime() / 1000));

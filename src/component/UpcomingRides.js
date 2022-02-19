@@ -1,18 +1,39 @@
 import React from 'react';
 import Img from '../assets/images/image.png';
-import Ride from '../util/data';
+import { sortedRides } from './allRides';
+import { timeConverter } from '../util/dateConverter';
+
+export const filterUpcoming = sortedRides.filter(
+  (item) => new Date(item.date) > Math.round(new Date().getTime()),
+);
 const UpcomingRides = () => {
-  console.log(new Date(Ride[0].date).toDateString());
-  const filtered = Ride.filter((item) => new Date(item.date) > Date.now());
-  console.log(filtered);
   return (
     <>
-      <img src={Img} alt="Location" />
-      <div>Upcoming Rides</div>
+      {filterUpcoming ? (
+        <div>There are no UpcomingRides</div>
+      ) : (
+        <div>
+          {filterUpcoming.map((ride) => {
+            const { id, origin_station_code, station_path, date, distance } =
+              ride;
+
+            return (
+              <div key={id}>
+                <div className="img">
+                  <img src={Img} alt="Location" />
+                </div>
+                <p>Ride Id :{id}</p>
+                <p>Origin Station: {origin_station_code}</p>
+                <p>station path: [{station_path.toString()}]</p>
+                <p>Date: {timeConverter(date)}</p>
+                <p>Distance: {distance}</p>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </>
   );
 };
 
 export default UpcomingRides;
-
-new Date(1644924365);
