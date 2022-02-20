@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainNav from './component/mainNav';
-import Nav from './component/Nav';
 import './App.css';
 import UpcomingRides from './component/UpcomingRides';
 import NearestRides from './component/NearestRides';
@@ -12,15 +11,13 @@ const App = () => {
     <div className="App">
       <Router>
         <MainNav />
-        <Nav />
-        <Routes>
-          <Route exact path="/" element={<NearestRides />} />
 
+        <Routes>
           <Route path="/nearest-rides" element={<NearestRides />} />
 
-          <Route path="/upcoming-rides" element={<UpcomingRides />} />
-
           <Route path="/past-rides" element={<PastRides />} />
+
+          <Route path="/upcoming-rides" element={<UpcomingRides />} />
         </Routes>
       </Router>
     </div>

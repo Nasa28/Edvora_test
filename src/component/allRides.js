@@ -1,3 +1,4 @@
+
 import Ride from '../util/data';
 import user from '../util/user';
 const station = user.station_code;
@@ -11,3 +12,4 @@ const Rides = Ride.map((item) => {
 });
 
 export const sortedRides = Rides.sort((a, b) => a.distance - b.distance);
+
