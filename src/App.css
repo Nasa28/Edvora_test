@@ -3,6 +3,26 @@
   background-color: rgb(41, 41, 41);
 }
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 43px;
+  margin-left: 43px;
+}
+
+.links {
+  display: flex;
+}
+
+.filterIcon {
+  display: flex;
+  align-items: center;
+}
+
+.filterIcon p {
+  margin-left: 10px;
+  color: rgb(255, 255, 255);
+}
 .main {
   background-color: rgb(16, 16, 16);
   max-height: 84px;
@@ -32,6 +52,59 @@
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
-   margin-left: 43px;
+  margin-left: 43px;
   /* line-height: 43px; */
+}
+
+.data-body {
+  background-color: rgb(23, 23, 23);
+  display: flex;
+  margin-right: 43px;
+  margin-left: 43px;
+  border-radius: 10px;
+  align-items: center;
+  margin-top: 20px;
+  padding-left: 30px;
+  color: wheat;
+}
+
+.location {
+  display: flex;
+  margin-right: 43px;
+  max-height: 70px;
+}
+
+.location p {
+  background-color: rgb(16, 16, 16);
+  color: rgb(255, 255, 255);
+  border-radius: 16px;
+  padding: 10px 20px 0px 20px;
+}
+
+.location p:first-child {
+  margin-right: 20px;
+}
+.navs {
+  margin-bottom: 30px;
+}
+
+.info {
+  display: flex;
+}
+
+.img {
+  margin-right: 43px;
+}
+
+.details {
+  text-align: left;
+  min-width: 550px;
+}
+
+.para {
+  color: rgb(207, 207, 207);
+}
+
+.span {
+  color: rgb(255, 255, 255);
 }

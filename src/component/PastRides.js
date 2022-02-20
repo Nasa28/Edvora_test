@@ -4,9 +4,9 @@ import { sortedRides } from './allRides';
 import { useState } from 'react';
 import { timeConverter } from '../util/dateConverter';
 import Nav from './Nav';
- export const filterPast = sortedRides.filter(
-   (item) => new Date(item.date) < Math.round(new Date().getTime()),
- );
+export const filterPast = sortedRides.filter(
+  (item) => new Date(item.date) < Math.round(new Date().getTime()),
+);
 const PastRide = () => {
   const filterPast = sortedRides.filter(
     (item) => new Date(item.date) < Math.round(new Date().getTime()),
@@ -17,7 +17,7 @@ const PastRide = () => {
     if (!stateNames.includes(state.state)) {
       stateNames.push(state.state);
     }
-    return stateNames
+    return stateNames;
   });
 
   const cityNames = ['City'];
@@ -25,7 +25,7 @@ const PastRide = () => {
     if (!cityNames.includes(city.city)) {
       cityNames.push(city.city);
     }
-    return cityNames
+    return cityNames;
   });
 
   const [states, setStates] = useState('State');
@@ -70,19 +70,47 @@ const PastRide = () => {
       ) : (
         <div>
           {filteredPast.map((ride) => {
-            const { id, origin_station_code, station_path, date, distance } =
-              ride;
+            const {
+              id,
+              origin_station_code,
+              station_path,
+              date,
+              distance,
+              state,
+              city,
+            } = ride;
 
             return (
-              <div key={id}>
+              <div key={id} className="data-body">
                 <div className="img">
                   <img src={Img} alt="Location" />
                 </div>
-                <p>Ride Id :{id}</p>
-                <p>Origin Station: {origin_station_code}</p>
-                <p>station path: [{station_path.toString()}]</p>
-                <p>Date: {timeConverter(date)}</p>
-                <p>Distance: {distance}</p>
+                <div className="info">
+                  <div className="details">
+                    <p className="para">
+                      Ride Id : <span className="span">{id}</span>
+                    </p>
+                    <p className="para">
+                      Origin Station:
+                      <span className="span">{origin_station_code}</span>
+                    </p>
+                    <p className="para">
+                      station path:
+                      <span className="span"> [{station_path.toString()}]</span>
+                    </p>
+                    <p className="para">
+                      Date: <span className="span">{timeConverter(date)}</span>
+                    </p>
+                    <p className="para">
+                      Distance: <span className="span"> {distance}</span>
+                    </p>
+                  </div>
+
+                  <div className="location">
+                    <p>{state}</p>
+                    <p>{city}</p>
+                  </div>
+                </div>
               </div>
             );
           })}
