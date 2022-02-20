@@ -13,6 +13,8 @@ const App = () => {
         <MainNav />
 
         <Routes>
+          <Route path="/" element={<NearestRides />} />
+
           <Route path="/nearest-rides" element={<NearestRides />} />
 
           <Route path="/past-rides" element={<PastRides />} />

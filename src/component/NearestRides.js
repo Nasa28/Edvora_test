@@ -11,6 +11,7 @@ const NearestRides = () => {
     if (!stateNames.includes(state.state)) {
       stateNames.push(state.state);
     }
+    return stateNames;
   });
 
   const cityNames = ['City'];
@@ -18,6 +19,7 @@ const NearestRides = () => {
     if (!cityNames.includes(city.city)) {
       cityNames.push(city.city);
     }
+    return cityNames;
   });
   const [states, setStates] = useState('State');
   const [city, setCity] = useState('City');

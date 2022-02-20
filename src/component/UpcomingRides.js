@@ -1,8 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-
 import Img from '../assets/images/image.png';
-
 import { sortedRides } from './allRides';
 import { timeConverter } from '../util/dateConverter';
 import Nav from './Nav';
@@ -16,6 +14,7 @@ const UpcomingRides = () => {
     if (!stateNames.includes(state.state)) {
       stateNames.push(state.state);
     }
+    return stateNames;
   });
 
   const cityNames = ['City'];
@@ -23,6 +22,7 @@ const UpcomingRides = () => {
     if (!cityNames.includes(city.city)) {
       cityNames.push(city.city);
     }
+    return cityNames;
   });
 
   const [states, setStates] = useState('State');

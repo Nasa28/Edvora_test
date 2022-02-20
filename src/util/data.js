@@ -4,7 +4,7 @@ const Ride = [
     origin_station_code: 23,
     station_path: [23, 42, 45, 48, 56, 60, 77, 81, 93],
     destination_station_code: 93,
-    date: 1644984365,
+    date: 1644924365,
     map_url: 'url',
     state: 'Maharashtra',
     city: 'Panvel',
@@ -26,8 +26,8 @@ const Ride = [
     destination_station_code: 91,
     date: 1644924365,
     map_url: 'url',
-    state: 'Benue',
-    city: 'Aba',
+    state: 'Maharashtra',
+    city: 'Panvel',
   },
 ];
 export default Ride;

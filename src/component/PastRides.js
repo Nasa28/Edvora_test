@@ -4,7 +4,9 @@ import { sortedRides } from './allRides';
 import { useState } from 'react';
 import { timeConverter } from '../util/dateConverter';
 import Nav from './Nav';
-
+ export const filterPast = sortedRides.filter(
+   (item) => new Date(item.date) < Math.round(new Date().getTime()),
+ );
 const PastRide = () => {
   const filterPast = sortedRides.filter(
     (item) => new Date(item.date) < Math.round(new Date().getTime()),
@@ -15,6 +17,7 @@ const PastRide = () => {
     if (!stateNames.includes(state.state)) {
       stateNames.push(state.state);
     }
+    return stateNames
   });
 
   const cityNames = ['City'];
@@ -22,6 +25,7 @@ const PastRide = () => {
     if (!cityNames.includes(city.city)) {
       cityNames.push(city.city);
     }
+    return cityNames
   });
 
   const [states, setStates] = useState('State');
