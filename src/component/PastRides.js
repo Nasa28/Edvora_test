@@ -46,25 +46,27 @@ const PastRide = () => {
       (ride.city === city || city === 'City') &&
       (ride.state === states || states === 'State'),
   );
-
   return (
     <>
       <Nav filteredPast={filteredPast.length} />
-      <select className="select" onChange={handleFilterChange} name="filter">
-        {stateNames.map((filter) => (
-          <option name="category" value={filter} key={filter}>
-            {filter}
-          </option>
-        ))}
-      </select>
+      <div className="filters">
+        <select className="select" onChange={handleFilterChange} name="filter">
+          {stateNames.map((filter) => (
+            <option name="category" value={filter} key={filter}>
+              {filter}
+            </option>
+          ))}
+        </select>
 
-      <select className="select" onChange={handleFilterChange} name="filter">
-        {cityNames.map((filter) => (
-          <option name="category" value={filter} key={filter}>
-            {filter}
-          </option>
-        ))}
-      </select>
+        <select className="select" onChange={handleFilterChange} name="filter">
+          {cityNames.map((filter) => (
+            <option name="category" value={filter} key={filter}>
+              {filter}
+            </option>
+          ))}
+        </select>
+      </div>
+
       {filteredPast.length === 0 ? (
         <div>There are no Past Rides</div>
       ) : (

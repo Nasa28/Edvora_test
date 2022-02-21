@@ -47,22 +47,23 @@ const UpcomingRides = () => {
   return (
     <>
       <Nav filteredUpComing={filteredUpComing.length} />
+      <div className="filters">
+        <select className="select" onChange={handleFilterChange} name="filter">
+          {stateNames.map((filter) => (
+            <option name="category" value={filter} key={filter}>
+              {filter}
+            </option>
+          ))}
+        </select>
 
-      <select className="select" onChange={handleFilterChange} name="filter">
-        {stateNames.map((filter) => (
-          <option name="category" value={filter} key={filter}>
-            {filter}
-          </option>
-        ))}
-      </select>
-
-      <select className="select" onChange={handleFilterChange} name="filter">
-        {cityNames.map((filter) => (
-          <option name="category" value={filter} key={filter}>
-            {filter}
-          </option>
-        ))}
-      </select>
+        <select className="select" onChange={handleFilterChange} name="filter">
+          {cityNames.map((filter) => (
+            <option name="category" value={filter} key={filter}>
+              {filter}
+            </option>
+          ))}
+        </select>
+      </div>
       {filteredUpComing.length === 0 ? (
         <div>There are no Upcoming Rides</div>
       ) : (

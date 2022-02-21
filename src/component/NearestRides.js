@@ -41,21 +41,23 @@ const NearestRides = () => {
   return (
     <>
       <Nav filteredNearest={filteredNearest.length} cityNames="navs" />
-      <select className="select" onChange={handleFilterChange} name="filter">
-        {stateNames.map((filter) => (
-          <option name="category" value={filter} key={filter}>
-            {filter}
-          </option>
-        ))}
-      </select>
+      <div className="filters">
+        <select className="select" onChange={handleFilterChange} name="filter">
+          {stateNames.map((filter) => (
+            <option name="category" value={filter} key={filter}>
+              {filter}
+            </option>
+          ))}
+        </select>
 
-      <select className="select" onChange={handleFilterChange} name="filter">
-        {cityNames.map((filter) => (
-          <option name="category" value={filter} key={filter}>
-            {filter}
-          </option>
-        ))}
-      </select>
+        <select className="select" onChange={handleFilterChange} name="filter">
+          {cityNames.map((filter) => (
+            <option name="category" value={filter} key={filter}>
+              {filter}
+            </option>
+          ))}
+        </select>
+      </div>
       <div>
         {filteredNearest.map((ride) => {
           const {
