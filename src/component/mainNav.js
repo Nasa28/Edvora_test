@@ -1,8 +1,9 @@
 import React from 'react';
 import user from '../util/user';
 import userImg from '../assets/images/userImg.png';
+
 const MainNav = () => {
-  const name = user.name;
+  const { name } = user;
   return (
     <>
       <div className="main">

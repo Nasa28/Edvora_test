@@ -19,6 +19,6 @@ export const timeConverter = (timestamp) => {
   const date = a.getDate();
   const hour = a.getHours();
   const min = a.getMinutes();
-  const time = date + 'th' + ' ' + month + ' ' + year + ' ' + hour + ':' + min;
+  const time = `${date}th` + ` ${month} ${year} ${hour}:${min}`;
   return time;
 };

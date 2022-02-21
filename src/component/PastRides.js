@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Img from '../assets/images/image.png';
 import { sortedRides } from './allRides';
-import { useState } from 'react';
 import { timeConverter } from '../util/dateConverter';
 import Nav from './Nav';
+
 export const filterPast = sortedRides.filter(
   (item) => new Date(item.date) < Math.round(new Date().getTime()),
 );
@@ -42,9 +42,8 @@ const PastRide = () => {
   };
 
   const filteredPast = filterPast.filter(
-    (ride) =>
-      (ride.city === city || city === 'City') &&
-      (ride.state === states || states === 'State'),
+    (ride) => (ride.city === city || city === 'City')
+      && (ride.state === states || states === 'State'),
   );
   return (
     <>
@@ -90,7 +89,9 @@ const PastRide = () => {
                 <div className="info">
                   <div className="details">
                     <p className="para">
-                      Ride Id : <span className="span">{id}</span>
+                      Ride Id :
+                      {' '}
+                      <span className="span">{id}</span>
                     </p>
                     <p className="para">
                       Origin Station:
@@ -98,13 +99,25 @@ const PastRide = () => {
                     </p>
                     <p className="para">
                       station path:
-                      <span className="span"> [{station_path.toString()}]</span>
+                      <span className="span">
+                        {' '}
+                        [
+                        {station_path.toString()}
+                        ]
+                      </span>
                     </p>
                     <p className="para">
-                      Date: <span className="span">{timeConverter(date)}</span>
+                      Date:
+                      {' '}
+                      <span className="span">{timeConverter(date)}</span>
                     </p>
                     <p className="para">
-                      Distance: <span className="span"> {distance}</span>
+                      Distance:
+                      {' '}
+                      <span className="span">
+                        {' '}
+                        {distance}
+                      </span>
                     </p>
                   </div>
 

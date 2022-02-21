@@ -14,6 +14,7 @@
   display: flex;
   align-items: center;
 }
+
 .heading {
   padding-right: 20px;
   padding-left: 20px;
@@ -34,6 +35,7 @@
   color: rgb(255, 255, 255);
   text-decoration: underline;
 }
+
 .filterIcon {
   display: flex;
   align-items: center;
@@ -43,16 +45,18 @@
   margin-left: 10px;
   color: rgb(255, 255, 255);
 }
+
 .main {
   background-color: rgb(16, 16, 16);
   max-height: 84px;
   max-width: 1366px;
-  border-radius: 0px;
+  border-radius: 0;
   color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .user {
   display: flex;
   margin-right: 19.72px;
@@ -68,11 +72,11 @@
   width: 114px;
   left: 43px;
   top: 21px;
-  font-family: SF Pro Display;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
   margin-left: 43px;
+
   /* line-height: 43px; */
 }
 
@@ -98,12 +102,13 @@
   background-color: rgb(16, 16, 16);
   color: rgb(255, 255, 255);
   border-radius: 16px;
-  padding: 10px 20px 0px 20px;
+  padding: 10px 20px 0 20px;
 }
 
 .location p:first-child {
   margin-right: 20px;
 }
+
 .navs {
   margin-bottom: 30px;
 }
@@ -132,12 +137,12 @@
 .filters {
   display: flex;
   margin-right: 43px;
+
   /* margin-bottom: 40px; */
   justify-self: end;
   flex-direction: column;
   margin-left: 85%;
   max-width: 150px;
-  /* display: none; */
 }
 
 .select {
