@@ -2,7 +2,7 @@
 
 > THis is a simple page built with React and CSS.
 
-![screenshot](Readme.png)
+![screenshot](readme.png)
 
 ## Built With
 
