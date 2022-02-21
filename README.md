@@ -1,6 +1,6 @@
-# BOOKSTORE_CMS
+# Edvora Test
 
-> This is Bookstore app for Magic-books Inc. a fictional company based in Germany
+> THis is a simple page built with React and CSS.
 
 ![screenshot](Readme.png)
 
@@ -24,8 +24,7 @@ To run this project locally, make sure you have done the following:
 - Get a copy of the project by running
 
 ```
- git clone git@github.com:Nasa28/Bookstore-CMS.git
-
+ git clone git@github.com:Nasa28/Edvora_test.git
 ```
 
 on your terminal.
@@ -34,14 +33,15 @@ on your terminal.
 
 - cd into the project
 - open the project using code editor of your choice
-- Run `npm install` to set up all dependencies
+- Run `npm install` to install all dependencies
 - Run `npm start` to start the server
 - Open your prefered browser
 - Visit `http://localhost:3000/`
 
 ## Live version
 
-[Live Version](https://mybookstore-cms.netlify.app/)
+[Live Version](https://retinkinterview.netlify.app/)
+
 
 ## Authors
 
@@ -55,11 +55,12 @@ on your terminal.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Nasa28/Bookstore-CMS/issues).
+Feel free to check the [issues page](https://github.com/Nasa28/Edvora_test/issues).
 
 ## Acknowledgements
 
-[Microverse](https://www.microverse.org/)
+
+[Edvora Team]()
 
 ## Show your support
 
