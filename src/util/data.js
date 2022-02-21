@@ -7,7 +7,7 @@ const Ride = [
     date: 1644924365,
     map_url: 'url',
     state: 'Maharashtra',
-    city: 'aba',
+    city: 'Panvel',
   },
   {
     id: '002',
