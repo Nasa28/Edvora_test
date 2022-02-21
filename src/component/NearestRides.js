@@ -77,7 +77,6 @@ const NearestRides = () => {
                 <div className="details">
                   <p className="para">
                     Ride Id :
-                    {' '}
                     <span className="span">{id}</span>
                   </p>
                   <p className="para">
