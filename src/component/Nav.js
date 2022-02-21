@@ -12,11 +12,6 @@ const Nav = ({ filteredPast, filteredNearest, filteredUpComing }) => {
   const [style2, setStyle2] = useState('heading');
   const [style3, setStyle3] = useState('heading');
 
-  const styles1 = () => setStyle1('clickedLink');
-
-  const styles2 = () => setStyle2('clickedLink');
-
-  const styles3 = () => setStyle3('clickedLink');
   return (
     <>
       <nav className="nav">
@@ -25,15 +20,12 @@ const Nav = ({ filteredPast, filteredNearest, filteredUpComing }) => {
             <Link
               className={style1}
               to="/nearest-rides"
-              onClick={() => {
-                NearestRides();
-                styles1();
-              }}
+              onClick={() => NearestRides()}
+              onClick={() => setStyle1('clickedLink')}
             >
               <h3>
                 Nearest Rides(
-                {filteredNearest || sortedRides.length}
-                )
+                {filteredNearest || sortedRides.length})
               </h3>
             </Link>
           </div>
@@ -41,15 +33,12 @@ const Nav = ({ filteredPast, filteredNearest, filteredUpComing }) => {
             <Link
               className={style2}
               to="/upcoming-rides"
-              onClick={() => {
-                UpcomingRides();
-                styles2();
-              }}
+              onClick={() => UpcomingRides()}
+              onClick={() => setStyle2('clickedLink')}
             >
               <h3>
                 Upcoming Rides(
-                {filteredUpComing || filterUpcoming.length}
-                )
+                {filteredUpComing || filterUpcoming.length})
               </h3>
             </Link>
           </div>
@@ -58,15 +47,12 @@ const Nav = ({ filteredPast, filteredNearest, filteredUpComing }) => {
             <Link
               className={style3}
               to="/past-rides"
-              onClick={() => {
-                PastRides();
-                styles3();
-              }}
+              onClick={() => PastRides()}
+              onClick={() => setStyle3('clickedLink')}
             >
               <h3>
                 Past Rides(
-                {filteredPast || filterPast.length}
-                )
+                {filteredPast || filterPast.length})
               </h3>
             </Link>
           </div>
